@@ -21,6 +21,9 @@ Claude sẽ đề xuất kịch bản trước. Bạn sửa nếu cần, rồi n
 
 Lần dùng đầu tiên, Claude sẽ tạo cho bạn một trang **"DH Voice Relay"** riêng để chuyển giọng đọc và ảnh về.
 
+### Logo
+Logo DH có sẵn trong `dh-video/assets/`, Claude tự dùng, không cần tải thêm.
+
 ### Lưu ý
 - Phụ đề tiếng Lào do AI dịch, nên nhờ người Lào đọc lại trước khi đăng.
 - Video quảng cáo không ghi hotline (theo chính sách TikTok).

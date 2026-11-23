@@ -116,8 +116,11 @@ btn.onclick=()=>navigator.clipboard.writeText(window.__json).then(()=>btn.textCo
   2. Trang hiện dòng `tên ✓ id`.
   3. Đọc về bằng `read_asset(slug, id, max_bytes=4194304)`. File lớn sẽ báo lỗi "exceeds maximum allowed tokens" và lưu kết quả ra một file. Đây là bình thường.
   4. Giải mã bằng Python: `json.load` file đó, lấy `[1]['text']`, bỏ thẻ `untrusted-document-…` bằng regex. Dòng đầu là tên file, phần còn lại là base64. Với gói ảnh thì phần còn lại là JSON, `json.loads` rồi giải mã từng ảnh.
-- **Logo DH**: `https://congty.dhlaos.com/icon-512.png`. Mở URL trong Chrome, fetch, base64, chuyển qua trang trung chuyển (máy làm việc bị chặn domain này).
-  - Icon có chữ "CÔNG TY" ở dưới. Cắt lấy phần ngôi nhà bằng PIL: `crop((120,85,392,325))`, lưu thành `logo_house.png`.
+- **Logo DH: dùng file có sẵn trong skill**, không cần tải:
+  - `assets/logo_house.png` (272x240, nền trong): hình ngôi nhà DH đã cắt sẵn. Dùng cho góc trên trái (64 px) và màn kết (khoảng 400 px).
+  - `assets/dh-icon-512.png`: icon gốc 512x512, có chữ "CÔNG TY" bên dưới.
+  - Copy vào thư mục làm việc: `cp <thư mục skill>/assets/logo_house.png ./`.
+  - Chỉ khi không tìm thấy file mới lấy từ `https://congty.dhlaos.com/icon-512.png`: mở bằng Chrome, chuyển về qua trang trung chuyển, rồi cắt bằng PIL `crop((120,85,392,325))`.
 - Làm xong thì đóng hết các tab Chrome đã mở.
 
 ## 5. Tách câu và đặt nhịp giọng
@@ -223,3 +226,6 @@ Khi publish trang này, cần khai báo capability `assets` cho artifact (xem `d
 - `gen.py`: chèn `script.json` (danh sách `{vi, lo}`) và `timing.json` vào template để tạo `scene.html`.
 - `render.js`: render khung kiểm tra hoặc từng đoạn mp4.
 - `relay.html`: trang trung chuyển, publish nếu người dùng chưa có.
+
+## Thư mục `assets/`
+- `logo_house.png`, `dh-icon-512.png`: logo DH (xem mục 4).
