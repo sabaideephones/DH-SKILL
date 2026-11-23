@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset=utf8><title>DH Voice Relay</title>
+<style>body{background:#f6f4ef;color:#1d1a16;font:16px/1.5 system-ui,sans-serif;padding:24px 16px;max-width:640px;margin:auto}h1{font-size:20px;color:#9c7637}li{margin:6px 0;word-break:break-all}</style></head><body>
+<h1>DH · chuyển giọng đọc vào video</h1><p>Trang này nhận dữ liệu (giọng, ảnh, logo) và gửi về cho Claude.</p>
+<textarea id="drop" placeholder="Dán dữ liệu vào đây" style="width:100%;height:160px;font:12px monospace;border-radius:10px;padding:10px"></textarea><ol id="log"></ol>
+<script>
+const log=m=>{const li=document.createElement('li');li.textContent=m;document.getElementById('log').appendChild(li)};
+let P=null;const getAssets=()=>P||(P=(window.claude?.use?.("assets")||Promise.resolve(null)).catch(()=>null));
+getAssets().then(a=>log(a?'Sẵn sàng nhận file.':'Không có quyền lưu file (assets).'));
+document.getElementById('drop').addEventListener('paste',async e=>{e.preventDefault();const txt=e.clipboardData.getData('text');let items;try{items=JSON.parse(txt)}catch{log('Dữ liệu không hợp lệ ('+txt.length+' ký tự)');return}
+const a=await getAssets();if(!a){log('✗ no assets');return}
+for(const d of items){try{const r=await a.upload(new Blob([d.name+'\n'+d.b64],{type:'text/plain'}),{type:'text/plain'});log(d.name+' ✓ '+r.id)}catch(err){log(d.name+' ✗ '+(err.code||err.message||err))}}log('Xong.')});
+</script></body></html>

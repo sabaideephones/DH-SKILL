@@ -1,0 +1,182 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="node_modules/@fontsource/be-vietnam-pro/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/be-vietnam-pro/600.css">
+<link rel="stylesheet" href="node_modules/@fontsource/be-vietnam-pro/800.css">
+<link rel="stylesheet" href="node_modules/@fontsource/be-vietnam-pro/900.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-sans-lao/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/noto-sans-lao/600.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0b0a0c}
+body{font-family:'Be Vietnam Pro','Noto Sans Lao','Noto Color Emoji',sans-serif;color:#f6f4ef}
+#bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,#2a241c 0%,#141215 55%,#0b0a0c 100%)}
+#grid{position:absolute;inset:-200px;background-image:linear-gradient(rgba(212,174,108,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(212,174,108,.06) 2px,transparent 2px);background-size:90px 90px}
+#redwash{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(229,83,75,.28),transparent 65%);opacity:0}
+.sc{position:absolute;inset:0;opacity:0}
+.tag{position:absolute;left:50%;transform:translateX(-50%);top:150px;padding:14px 34px;border:3px solid #d4ae6c;border-radius:60px;color:#f0d49a;font-weight:800;font-size:34px;letter-spacing:4px;white-space:nowrap}
+.h1{position:absolute;left:60px;right:60px;text-align:center;font-weight:900;line-height:1.08}
+.gold{color:#f0d49a}.red{color:#e5534b}.green{color:#3fbf7f}
+#sub{position:absolute;left:50px;right:50px;bottom:140px;background:rgba(0,0,0,.6);border-radius:22px;padding:22px 30px;text-align:center}
+#sv{font-weight:600;font-size:40px;line-height:1.3;color:#fff}
+#sl{font-family:'Noto Sans Lao','Be Vietnam Pro';font-weight:600;font-size:32px;line-height:1.45;color:#f0d49a;margin-top:8px}
+#brand{position:absolute;top:44px;left:50px;display:flex;align-items:center;gap:16px;font-weight:800;font-size:26px;color:#d4ae6c;letter-spacing:2px}
+#brand img{width:64px}
+#prog{position:absolute;top:0;left:0;height:8px;background:#d4ae6c}
+.card{position:absolute;background:#f6f4ef;color:#141215;border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.chip{position:absolute;padding:18px 34px;border-radius:50px;font-weight:800;font-size:44px;white-space:nowrap}
+.row{position:absolute;left:90px;right:90px;height:150px;border-radius:30px;background:rgba(246,244,239,.07);border:2px solid rgba(212,174,108,.35);display:flex;align-items:center;gap:30px;padding:0 36px;font-size:46px;font-weight:800}
+.num{width:84px;height:84px;border-radius:50%;background:#d4ae6c;color:#141215;display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:900;flex:none}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div><div id="redwash"></div>
+<div id="brand"><img src="logo_house.png"><span>DH · NỘI BỘ XƯỞNG</span></div>
+
+<div class="sc" id="s0">
+ <div class="tag" style="border-color:#e5534b;color:#e5534b">⚠ CẢNH BÁO AN TOÀN</div>
+ <svg id="s0fire" style="position:absolute;left:340px;top:330px" width="400" height="400" viewBox="0 0 400 400">
+  <path d="M200 40 C240 120 310 150 300 250 C292 330 240 370 200 370 C150 370 100 330 100 260 C100 200 140 170 150 120 C170 160 180 180 200 190 C210 140 200 90 200 40Z" fill="#e5534b"/>
+  <path d="M200 200 C220 240 250 260 245 300 C240 340 220 355 200 355 C175 355 155 335 158 300 C160 270 185 250 200 200Z" fill="#f0d49a"/>
+  <circle cx="200" cy="210" r="185" fill="none" stroke="#f6f4ef" stroke-width="26"/>
+  <line id="s0slash" x1="70" y1="80" x2="330" y2="340" stroke="#f6f4ef" stroke-width="28" stroke-linecap="round" stroke-dasharray="368" stroke-dashoffset="368"/>
+ </svg>
+ <div class="h1" id="s0t1" style="top:800px;font-size:92px">PHẾ VÁN<br>CÔNG NGHIỆP</div>
+ <div class="h1 red" id="s0t2" style="top:1030px;font-size:120px">KHÔNG ĐỐT</div>
+</div>
+
+<div class="sc" id="s1">
+ <div class="tag">VÁN CÔNG NGHIỆP CÓ GÌ?</div>
+ <div id="s1boards"></div>
+ <div class="chip" id="s1c0" style="background:#e5534b;color:#fff;left:120px;top:980px">🧪 Keo formaldehyde</div>
+ <div class="chip" id="s1c1" style="background:#f0d49a;color:#141215;left:200px;top:1110px">📄 Giấy melamine</div>
+ <div class="chip" id="s1c2" style="background:#f6f4ef;color:#141215;left:280px;top:1240px">📏 Nẹp chỉ PVC</div>
+</div>
+
+<div class="sc" id="s2">
+ <div class="tag" style="border-color:#e5534b;color:#e5534b">ĐỐT LÊN SINH RA</div>
+ <canvas id="smoke" width="1080" height="1400" style="position:absolute;left:0;top:200px"></canvas>
+ <svg style="position:absolute;left:390px;top:1180px" width="300" height="300" viewBox="0 0 300 300"><rect x="40" y="40" width="220" height="230" rx="16" fill="#6b6f75"/><rect x="40" y="40" width="220" height="40" fill="#8a8f96"/><path d="M90 40 L60 0 L240 0 L210 40Z" fill="#8a8f96"/><rect x="100" y="170" width="100" height="70" rx="8" fill="#e5534b"/><rect x="110" y="180" width="80" height="50" rx="6" fill="#f0d49a"/></svg>
+ <div class="chip" id="s2c0" style="background:#e5534b;color:#fff">Formaldehyde</div>
+ <div class="chip" id="s2c1" style="background:#e5534b;color:#fff">Khí axit</div>
+ <div class="chip" id="s2c2" style="background:#e5534b;color:#fff">☠ Dioxin</div>
+ <div class="chip" id="s2c3" style="background:#e5534b;color:#fff">Bụi mịn PM2.5</div>
+</div>
+
+<div class="sc" id="s3">
+ <div class="tag">LÒ ĐỐT MINI</div>
+ <div class="card" id="s3ad" style="left:140px;top:280px;width:800px;height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column">
+  <div style="font-size:40px;font-weight:600;color:#666">Quảng cáo</div>
+  <div style="font-size:80px;font-weight:900">“KHÔNG KHÓI”</div>
+ </div>
+ <div class="row" id="s3r0" style="top:650px"><span class="red" style="font-size:70px">✗</span>Buồng đốt thứ cấp</div>
+ <div class="row" id="s3r1" style="top:830px"><span class="red" style="font-size:70px">✗</span>Bộ lọc khói</div>
+ <div class="h1" id="s3big" style="top:1060px;font-size:96px">Không khói<br><span class="red">≠ Không độc</span></div>
+</div>
+
+<div class="sc" id="s4">
+ <div class="tag" style="border-color:#e5534b;color:#e5534b">AI HÍT NHIỀU NHẤT?</div>
+ <svg style="position:absolute;left:90px;top:330px" width="900" height="900" viewBox="0 0 900 900">
+  <rect x="80" y="460" width="230" height="300" rx="14" fill="#6b6f75"/><path d="M110 460 L80 410 L310 410 L280 460Z" fill="#8a8f96"/>
+  <rect x="150" y="620" width="90" height="70" rx="8" fill="#e5534b"/>
+  <g id="s4puffs"></g>
+  <g transform="translate(620,360)" stroke="#f6f4ef" stroke-width="20" stroke-linecap="round" fill="none">
+   <circle cx="0" cy="0" r="62" fill="#141215"/><line x1="0" y1="62" x2="0" y2="260"/><line x1="0" y1="120" x2="-110" y2="200"/><line x1="0" y1="120" x2="90" y2="210"/><line x1="0" y1="260" x2="-70" y2="400"/><line x1="0" y1="260" x2="70" y2="400"/>
+   <line x1="-110" y1="200" x2="-170" y2="160" stroke="#d4ae6c"/>
+  </g>
+  <circle id="s4warn" cx="620" cy="360" r="95" fill="none" stroke="#e5534b" stroke-width="10"/>
+ </svg>
+ <div class="h1" id="s4t" style="top:1260px;font-size:78px">Anh em <span class="red">đứng đốt</span><br>hằng ngày</div>
+</div>
+
+<div class="sc" id="s5">
+ <div class="tag">KHÓI BAY ĐI ĐÂU?</div>
+ <svg style="position:absolute;left:0;top:260px" width="1080" height="1100" viewBox="0 0 1080 1100">
+  <g id="s5rings"></g>
+  <rect x="440" y="470" width="200" height="150" rx="10" fill="#d4ae6c"/><path d="M420 480 L540 380 L660 480Z" fill="#f0d49a"/>
+  <text x="540" y="580" text-anchor="middle" font-size="60" font-weight="900" fill="#141215" font-family="Be Vietnam Pro">DH</text>
+ </svg>
+ <div class="chip" id="s5a" style="left:70px;top:420px;background:#f6f4ef;color:#141215">🏠 Hàng xóm</div>
+ <div class="chip" id="s5b" style="left:640px;top:1000px;background:#f6f4ef;color:#141215">🏠 Nhà dân</div>
+ <div class="chip" id="s5c" style="left:100px;top:1150px;background:#e5534b;color:#fff;font-size:50px">🏥 Bệnh viện Mẹ và Bé</div>
+</div>
+
+<div class="sc" id="s6">
+ <div class="tag">PHÁP LUẬT</div>
+ <div class="h1" id="s6t" style="top:300px;font-size:84px">Viêng Chăn<br><span class="gold">CẤM ĐỐT RÁC</span></div>
+ <div class="card" id="s6fine" style="left:110px;right:110px;top:640px;height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+  <div style="font-size:44px;font-weight:600;color:#555">Phạt tới</div>
+  <div id="s6num" style="font-size:110px;font-weight:900;color:#e5534b">0 ₭</div>
+  <div style="font-size:44px;font-weight:600;color:#555">mỗi lần vi phạm</div>
+ </div>
+ <div id="s6stamp" style="position:absolute;left:640px;top:1040px;transform:rotate(-12deg);border:10px solid #e5534b;color:#e5534b;font-weight:900;font-size:64px;padding:10px 30px;border-radius:16px;background:rgba(11,10,12,.6)">PHẠT</div>
+</div>
+
+<div class="sc" id="s7">
+ <div class="tag">TOÀN QUỐC</div>
+ <div id="s7cal" style="position:absolute;left:110px;right:110px;top:290px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px"></div>
+ <div class="h1" id="s7t" style="top:820px;font-size:72px">Tháng 1 → 4<br><span class="red">Cấm đốt ngoài trời</span></div>
+ <div class="chip" id="s7ph" style="left:50%;top:1110px;background:#f6f4ef;color:#141215;font-size:56px">📞 Đường dây nóng</div>
+</div>
+
+<div class="sc" id="s8">
+ <div class="tag" style="border-color:#3fbf7f;color:#3fbf7f">QUY ĐỊNH CỦA XƯỞNG</div>
+ <div class="row" id="s8r0" style="top:420px"><div class="num">1</div><span>Không đốt <span class="red">ván công nghiệp</span></span></div>
+ <div class="row" id="s8r1" style="top:620px"><div class="num">2</div><span>Phế ván <span class="gold">để riêng</span></span></div>
+ <div class="row" id="s8r2" style="top:820px"><div class="num">3</div><span>Đúng <span class="gold">khu tập kết</span> 📦</span></div>
+</div>
+
+<div class="sc" id="s9">
+ <div class="tag" style="border-color:#3fbf7f;color:#3fbf7f">QUY ĐỊNH CỦA XƯỞNG</div>
+ <div class="row" id="s9r0" style="top:420px"><div class="num">4</div><span>Tấm còn dùng → <span class="green">tận dụng</span> ♻️</span></div>
+ <div class="row" id="s9r1" style="top:620px"><div class="num">5</div><span>Thấy ai đốt → <span class="gold">báo quản lý</span> 📣</span></div>
+</div>
+
+<div class="sc" id="s10">
+ <div id="s10rays" style="position:absolute;left:240px;top:180px;width:600px;height:600px;border-radius:50%;background:conic-gradient(from 0deg,rgba(240,212,154,0),rgba(240,212,154,.22),rgba(240,212,154,0) 20%,rgba(240,212,154,.22) 35%,rgba(240,212,154,0) 50%,rgba(240,212,154,.22) 70%,rgba(240,212,154,0) 85%)"></div>
+ <img id="s10logo" src="logo_house.png" style="position:absolute;left:340px;top:300px;width:400px">
+ <div class="h1" id="s10t" style="top:780px;font-size:70px;line-height:1.35">Xưởng <span class="green">sạch</span><br>Anh em <span class="green">khỏe</span><br><span class="gold">DH làm ăn lâu dài</span></div>
+ <div class="h1" id="s10n" style="top:1240px;font-size:28px;font-weight:600;letter-spacing:3px;color:#d4ae6c">D AND H CONSTRUCTION AND DECORATION CO., LTD</div>
+</div>
+
+<div id="sub"><div id="sv"></div><div id="sl"></div></div>
+<div id="prog"></div>
+<script>
+const S=__S__, T=__T__, TOTAL=__TOTAL__;
+const N=S.length, LEAD=0.35, XF=0.35;
+const starts=T.map(x=>Math.max(0,x[0]-LEAD)); starts[0]=0;
+const ends=starts.slice(1).concat([TOTAL]);
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=cl(x);return 1-Math.pow(1-x,3)};
+const back=x=>{x=cl(x);const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+function pop(el,lt,at,dur=0.45,dy=40){const p=(lt-at)/dur;el.style.opacity=cl(p*1.6);el.style.transform=(el.dataset.base||'')+` translateY(${(1-ease(p))*dy}px) scale(${0.85+0.15*back(p)})`;}
+const bnames=['MDF','MFC','Ván ép'];const bc=['#b98d5a','#e9e4da','#c9a070'];
+let h='';bnames.forEach((n,i)=>{h+=`<div id="s1b${i}" style="position:absolute;left:${110+i*300}px;top:300px;width:260px;height:560px;border-radius:18px;background:${bc[i]};box-shadow:0 14px 40px rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center;padding-bottom:30px;font-weight:900;font-size:56px;color:#141215">${n}</div>`});$('s1boards').innerHTML=h;
+let ch='';for(let m=1;m<=12;m++){const on=m<=4;ch+=`<div id="cal${m}" style="height:110px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:800;background:${on?'#e5534b':'rgba(246,244,239,.08)'};color:${on?'#fff':'#aaa'}">T${m}</div>`}$('s7cal').innerHTML=ch;
+const smoke=$('smoke').getContext('2d');
+function rnd(i){const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)}
+function drawSmoke(lt){smoke.clearRect(0,0,1080,1400);for(let i=0;i<70;i++){const life=3.2,ph=(lt*0.9+rnd(i)*life)%life,p=ph/life;if(lt<rnd(i)*1.2)continue;const x=540+(rnd(i+9)-0.5)*120+Math.sin(p*6+i)*60*p+(rnd(i+3)-0.5)*500*p;const y=1000-p*900;const r=40+p*160;smoke.fillStyle=`rgba(120,120,125,${0.22*(1-p)})`;smoke.beginPath();smoke.arc(x,y,r,0,7);smoke.fill()}}
+const chipPos=[[90,380],[640,520],[150,660],[520,800]];
+function render(t){
+ $('grid').style.transform=`translate(${(t*12)%90}px,${(t*18)%90}px)`;
+ $('prog').style.width=(t/TOTAL*1080)+'px';
+ let cur=0;for(let i=0;i<N;i++)if(t>=starts[i])cur=i;
+ for(let i=0;i<N;i++){const e=$('s'+i);let o=0;if(t>=starts[i]&&t<ends[i]+XF){o=i===0?1:cl((t-starts[i])/XF);if(t>ends[i])o=1-cl((t-ends[i])/XF)}e.style.opacity=o;e.style.display=o>0?'block':'none'}
+ let si=-1;for(let i=0;i<N;i++)if(t>=T[i][0]-0.15&&t<=T[i][1]+0.5)si=i;
+ const sub=$('sub');if(si>=0){$('sv').textContent=S[si].vi;$('sl').textContent=S[si].lo;sub.style.opacity=1}else sub.style.opacity=0;
+ $('brand').style.opacity=t<starts[N-1]?1:0;
+ let red=0; if(cur===2||cur===4)red=0.8; if(cur===0)red=0.5+0.3*Math.sin(t*4); $('redwash').style.opacity=red;
+ const L=i=>t-starts[i];
+ {const lt=L(0);const sv=$('s0fire');sv.style.transform=`scale(${0.6+0.4*back(lt/0.6)})`;sv.style.opacity=cl(lt/0.3);$('s0slash').style.strokeDashoffset=368*(1-ease((lt-0.7)/0.5));pop($('s0t1'),lt,1.0);pop($('s0t2'),lt,2.6,0.5,60);}
+ {const lt=L(1);for(let i=0;i<3;i++){const b=$('s1b'+i);const p=ease((lt-0.1-i*0.15)/0.5);b.style.opacity=cl(p*2);b.style.transform=`translateY(${(1-p)*80}px) rotate(${(i-1)*4*p}deg)`}
+  for(let i=0;i<3;i++){pop($('s1c'+i),lt,1.4+i*0.75)}}
+ if(cur>=1&&cur<=3){const lt=L(2);drawSmoke(Math.max(0,lt));for(let i=0;i<4;i++){const c=$('s2c'+i);const p=(lt-0.9-i*0.85);c.style.left=chipPos[i][0]+'px';c.style.top=(chipPos[i][1]+60-ease(p/0.8)*60+Math.sin(t*1.5+i)*10)+'px';c.style.opacity=cl(p/0.3)}}
+ {const lt=L(3);pop($('s3ad'),lt,0.1);pop($('s3r0'),lt,1.6);pop($('s3r1'),lt,2.6);pop($('s3big'),lt,6.0,0.5,60)}
+ {const lt=L(4);let g='';for(let i=0;i<14;i++){const p=((lt*0.5+i/14)%1);if(lt<i*0.12)continue;const x=200+p*420,y=400-Math.sin(p*3.14)*120+(rnd(i)-0.5)*40;g+=`<circle cx="${x}" cy="${y}" r="${30+p*30}" fill="rgba(140,140,145,${0.5*(1-p*0.5)})"/>`}$('s4puffs').innerHTML=g;$('s4warn').style.opacity=lt>2.2?0.5+0.5*Math.sin(lt*8):0;pop($('s4t'),lt,1.8)}
+ {const lt=L(5);let g='';for(let k=0;k<4;k++){const p=((lt*0.45+k/4)%1);g+=`<circle cx="540" cy="520" r="${80+p*520}" fill="none" stroke="rgba(160,160,165,${0.45*(1-p)})" stroke-width="${30*(1-p)+4}"/>`}$('s5rings').innerHTML=g;pop($('s5a'),lt,0.5);pop($('s5b'),lt,0.9);pop($('s5c'),lt,1.6,0.5,60)}
+ {const lt=L(6);pop($('s6t'),lt,0.1);pop($('s6fine'),lt,1.3);const v=Math.round(10*ease((lt-1.6)/1.6))*1e6;$('s6num').textContent=v.toLocaleString('vi-VN')+' ₭';const st=$('s6stamp');const p=(lt-3.4)/0.25;st.style.opacity=cl(p);st.style.transform=`rotate(-12deg) scale(${p<1?2.2-1.2*cl(p):1})`}
+ {const lt=L(7);for(let m=1;m<=12;m++){const c=$('cal'+m);const p=ease((lt-0.05*m)/0.4);c.style.opacity=p;c.style.transform=`scale(${m<=4&&lt>1?1+0.06*Math.sin(lt*6):1})`}pop($('s7t'),lt,1.0);const ph=$('s7ph');ph.dataset.base='translateX(-50%)';pop(ph,lt,3.0);if(lt>3.4)ph.style.transform=`translateX(-50%) rotate(${Math.sin(lt*30)*3}deg)`}
+ {const lt=L(8);pop($('s8r0'),lt,0.4);pop($('s8r1'),lt,2.4);pop($('s8r2'),lt,3.3)}
+ {const lt=L(9);pop($('s9r0'),lt,0.3);pop($('s9r1'),lt,2.4)}
+ {const lt=L(10);const lg=$('s10logo');lg.style.opacity=cl(lt/0.4);lg.style.transform=`scale(${0.5+0.5*back(lt/0.7)})`;$('s10rays').style.transform=`rotate(${lt*25}deg)`;$('s10rays').style.opacity=cl(lt/0.6);pop($('s10t'),lt,0.6);pop($('s10n'),lt,1.4)}
+}
+window.render=render;window.TOTAL=TOTAL;
+</script></body></html>
